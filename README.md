@@ -1,4 +1,4 @@
-# Sales_data_analysis
+# Sales Data Analysis
 
 This project analyzes **transactional sales data from 2024** used to analyze the **impact of discounts on profit and customer purchasing behavior**. 
 
