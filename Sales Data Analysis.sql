@@ -1,29 +1,3 @@
-Create table sales
-(
-Order_ID INT,
-Customer_ID	Varchar(50),
-Order_Date date,
-Region varchar(50),
-Product_Category varchar(50),
-Customer_Segment varchar(50),
-Quantity int,
-Unit_Price float,
-Discount_Rate float,
-Revenue	float,
-Cost float,
-Profit float,
-Payment_Method varchar(50)
-);
-
-show variables like 'secure_file_priv';
-
-load data infile "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/Business_Analytics_Dataset.csv"
-into table sales
-fields terminated by ','
-enclosed by '"'
-lines terminated by '\n'
-ignore 1 rows;
-
 # Distribution of customers by number of orders placed
 with cnt_data as (select customer_id,
 count(customer_id) as ord_cnt_per_customer from sales
